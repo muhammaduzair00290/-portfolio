@@ -19,9 +19,11 @@
   --text-color-light: hsl(var(--hue-color), 8%, 65%);
   --input-color: hsl(var(--hue-color), 70%, 96%);
   --body-color: hsl(var(--hue-color), 60%, 99%);
-  --container-color: #fff;
+  --container-color: #dfdfdf;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+  --body-color:rgb(198, 235, 217); /* Change this to your desired background color */
+
 
   /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
@@ -82,6 +84,11 @@ body.dark-theme {
   --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
 }
+
+
+
+
+
 
 /*========== Button Dark/Light ==========*/
 .nav__btns {
@@ -553,7 +560,7 @@ img {
 }
 
 .skills__google {
-  width: 70%;
+  width: 40%;
 }
 
 .skills__counter {
@@ -561,7 +568,7 @@ img {
 }
 
 .skills__office {
-  width: 90%;
+  width: 40%;
 }
 
 .skills__close .skills__list {

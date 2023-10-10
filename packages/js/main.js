@@ -210,3 +210,42 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
+const Name = document.getElementById('name');
+    const Email = document.getElementById('email');
+    const Subject = document.getElementById('sujbect');
+    const Description = document.getElementById('description');
+  
+  submit.addEventListener('submit',(e)=>{
+      e.preventDefault();
+      let ebody = `
+      <h1>First Name: </h1>${Name.value}
+      <br>
+      <h1>Email: </h1>${Email.value}
+      <br>
+      <h1>Subject: </h1>${Subject.value}
+      <br>
+      <h1>Message: </h1>${Description.value}
+      <br>
+      `;
+  
+      Email.send({
+          Host : "smtp.elasticemail.com", //add your token here
+          Username:"muhammaduzair12344321@gmail.com",
+          Password:"uzair@333985",
+          To : 'muhammaduzair12344321@gmail.com', 
+        //  From : "ahsantanveer818@gmail.com",
+          Subject : sub,
+          Body : ebody
+      }).then(
+        message => {
+          if (message == 'OK') {
+    
+            swal("Successfull", "Your Data Successfully Received", "success");
+          }
+          else {
+    
+            swal("Something Wrong", "Your Data is not Received", "error");
+          }
+        }
+      );
+  });
